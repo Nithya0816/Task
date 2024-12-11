@@ -28,8 +28,8 @@ function submitButton() {
     error2Div.textContent = "Please enter vaild gmail id";
     errorText=true;
   }
-  if (phone.length !== 10 || isNaN(phone)) {
-    error3Div.textContent = "Phone number must be 10 digit number";
+  if (!phone || !/^[6-9]\d{9}$/.test(phone)) {
+    error3Div.textContent = "Please enter Vaild Phone Number";
     errorText=true;
   }
 
